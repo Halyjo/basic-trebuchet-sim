@@ -1,10 +1,11 @@
 # A simple trebuchet simulator
+
 By Harald Lykke Joakimsen (harald.l.joakimsen@uit.no)
-
-<img src="figures/single_pendulum_simulation.gif" alt="drawing" width="200"/>
-<img src="figures/double_pendulum_simulation.gif" alt="drawing" width="200"/>
-<img src="figures/trebuchet_simulation.gif" alt="drawing" width="200"/>
-
+<div>
+  <img src="figures/single_pendulum_simulation.gif" alt="drawing" width="500"/>
+  <img src="figures/double_pendulum_simulation.gif" alt="drawing" width="500"/>
+  <img src="figures/trebuchet_simulation.gif" alt="drawing" width="500"/>
+</div>
 
 ## How to run
 1. Clone the repository: `git clone <this repo url>`
@@ -15,8 +16,8 @@ By Harald Lykke Joakimsen (harald.l.joakimsen@uit.no)
 3. change directory to `src/` (for relative referance to cache and figures to work): `cd src`
 
 4. Run code:
-    - With [uv](https://docs.astral.sh/uv/): `uv run trebuchet.py` etc.
-    - Or run with python directly: `python3 trebuchet.py`
+  - With [uv](https://docs.astral.sh/uv/): `uv run trebuchet.py` etc.
+  - Or run with python directly: `python3 trebuchet.py`
 
 5. The simulation results will be saved in the `figures` folder as `trebuchet_simulation.gif` and the expressions for the double derivatives of the two angles should be printed to the console.
 
