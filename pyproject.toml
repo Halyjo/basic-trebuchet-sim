@@ -1,0 +1,21 @@
+[project]
+name = "basic-trebuchet-sim"
+version = "0.1.0"
+authors = [
+    { name = "Harald Lykke Joakimsen", email = "harald.l.joakimsen@uit.no" },
+]
+license = { text = "MIT" }
+description = "Small simulator for basic trebuchet mechanics."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "sympy",
+]
+
+[dependency-groups]
+dev = [
+    "ruff",
+]
