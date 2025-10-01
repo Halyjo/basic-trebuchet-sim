@@ -2,9 +2,9 @@
 
 By Harald Lykke Joakimsen (harald.l.joakimsen@uit.no)
 <div>
-  <img src="figures/single_pendulum_simulation.gif" alt="drawing" width="220"/>
-  <img src="figures/double_pendulum_simulation.gif" alt="drawing" width="220"/>
-  <img src="figures/trebuchet_simulation.gif" alt="drawing" width="220"/>
+  <img src="figures/single_pendulum_simulation.gif" alt="drawing" width="240"/>
+  <img src="figures/double_pendulum_simulation.gif" alt="drawing" width="240"/>
+  <img src="figures/trebuchet_simulation.gif" alt="drawing" width="240"/>
 </div>
 
 ## How to run
