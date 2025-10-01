@@ -5,6 +5,9 @@ import sympy as sp
 from sympy.vector import CoordSys3D
 from matplotlib import animation
 
+## Set plot design style
+plt.style.use("seaborn-v0_8-talk")
+
 
 def main():
     # Parameters
@@ -20,7 +23,8 @@ def main():
     t_eval = np.linspace(t_span[0], t_span[1], 300)
     sol = simulate_single_pendulum(params, y0, t_span, t_eval)
     plot_results(sol.t, sol.y)
-    animate_pendulum(sol.t, sol.y, 1.0)
+    ani = animate_pendulum(sol.t, sol.y, 1.0)
+    ani.save("../figures/single_pendulum_simulation.gif", writer="pillow", fps=30)
 
 
 def get_ode_for_single_pendulum():
@@ -127,7 +131,8 @@ def animate_pendulum(t, y, l1=1.0):
     ax.set_xlim(-1.2 * l1, 1.2 * l1)
     ax.set_ylim(-1.2 * l1, 0.2 * l1)
     ax.set_aspect("equal")
-    ax.grid(True)
+    ax.grid(False)
+    ax.axis("off")
 
     (line,) = ax.plot([], [], "o-", lw=2)
     time_text = ax.text(0.05, 0.9, "", transform=ax.transAxes)
