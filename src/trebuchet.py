@@ -1,16 +1,16 @@
-import numpy as np
-from scipy.integrate import solve_ivp
-from matplotlib import pyplot as plt
-import sympy as sp
-from sympy.vector import CoordSys3D
-from matplotlib import animation
 import os
 import pickle
-from matplotlib.collections import LineCollection
-import matplotlib as mpl
 import warnings
 from typing import Literal, Optional
 
+import matplotlib as mpl
+import numpy as np
+import sympy as sp
+from matplotlib import animation
+from matplotlib import pyplot as plt
+from matplotlib.collections import LineCollection
+from scipy.integrate import solve_ivp
+from sympy.vector import CoordSys3D
 
 ## Set plot design style
 plt.style.use("seaborn-v0_8-talk")

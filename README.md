@@ -8,6 +8,7 @@ By Harald Lykke Joakimsen (harald.l.joakimsen@uit.no)
 </div>
 
 ## How to run
+
 1. Clone the repository: `git clone <this repo url>`
 
 2. Make sure you have a Python environment with the required packages installed. You can use the provided `pyproject.toml` file with a tool like [uv](https://docs.astral.sh/uv/) or install the packages manually using pip:
@@ -31,6 +32,7 @@ This is a simple trebuchet simulator written in Python. The steps involved are:
 4. Visualize the results with Matplotlib.
 
 ## Figure
+
 <img src="figures/trebuchet.png" alt="drawing" width="600"/>
 
 *Figure made with Excalidraw*.
