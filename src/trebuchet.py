@@ -1,7 +1,7 @@
 import os
 import pickle
 import warnings
-from typing import Literal, Optional
+from typing import Literal, Optional, Callable
 
 import matplotlib as mpl
 import numpy as np
@@ -13,7 +13,7 @@ from scipy.integrate import solve_ivp
 from sympy.vector import CoordSys3D
 
 ## Set plot design style
-plt.style.use("seaborn-v0_8-talk")
+plt.style.use("seaborn-v0_8-poster")
 
 
 def main():
@@ -72,7 +72,7 @@ def main():
 
 def get_ode_for_trebuchet(
     start_fresh=False, show_expressions=False
-) -> tuple[callable, callable]:
+) -> tuple[Callable, Callable]:
     """
     Derive the equations of motion for a trebuchet using Lagrange's equations.
     Return functions for numerical evaluation of the second derivatives of the angles.
@@ -267,7 +267,7 @@ def simulate_trebuchet(params, y0, t_span, t_eval):
     ## d(dalpha)/dt = ddalpha (given by our derived function)
     ## and similarly for beta.
 
-    def odes(t, y):
+    def odes(_t, y):
         alpha, beta, dalpha, dbeta = y
         return [
             dalpha,
@@ -434,7 +434,7 @@ def animate_trebuchet(
     else:
         trail_collections = None
 
-    time_text = ax.text(0.05, 0.92, "", transform=ax.transAxes)
+    time_text = ax.text(0.05, 0.92, "", transform=ax.transAxes, fontsize=28)
 
     def init():
         for ln in lines:

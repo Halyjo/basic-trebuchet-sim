@@ -7,7 +7,7 @@ from matplotlib import animation
 
 
 ## Set plot design style
-plt.style.use("seaborn-v0_8-talk")
+plt.style.use("seaborn-v0_8-poster")
 
 
 def main():
@@ -155,7 +155,7 @@ def simulate_double_pendulum(params, y0, t_span, t_eval):
 
 
 def plot_results(t, y):
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(7, 7))
     plt.plot(t, y[0], label="Alpha (rad)")
     plt.plot(t, y[1], label="Beta (rad)")
     plt.plot(t, y[2], label="Angular Velocity Alpha (rad/s)")
@@ -192,7 +192,7 @@ def animate_double_pendulum(t, y, l1=1.0, l2=1.0):
     ax.axis("off")
 
     (line,) = ax.plot([], [], "o-", lw=2)
-    time_text = ax.text(0.05, 0.9, "", transform=ax.transAxes)
+    time_text = ax.text(0.05, 0.9, "", transform=ax.transAxes, fontsize=28)
 
     def init():
         line.set_data([], [])

@@ -6,7 +6,7 @@ from sympy.vector import CoordSys3D
 from matplotlib import animation
 
 ## Set plot design style
-plt.style.use("seaborn-v0_8-talk")
+plt.style.use("seaborn-v0_8-poster")
 
 
 def main():
@@ -103,7 +103,7 @@ def simulate_single_pendulum(params, y0, t_span, t_eval):
 
 
 def plot_results(t, y):
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(5, 5))
     plt.plot(t, y[0], label="Angle (rad)")
     plt.plot(t, y[1], label="Angular Velocity (rad/s)")
     plt.title("Single Pendulum Simulation")
@@ -129,13 +129,13 @@ def animate_pendulum(t, y, l1=1.0):
 
     fig, ax = plt.subplots(figsize=(5, 5))
     ax.set_xlim(-1.2 * l1, 1.2 * l1)
-    ax.set_ylim(-1.2 * l1, 0.2 * l1)
+    ax.set_ylim(-1.2 * l1, 1.2 * l1)
     ax.set_aspect("equal")
     ax.grid(False)
     ax.axis("off")
 
     (line,) = ax.plot([], [], "o-", lw=2)
-    time_text = ax.text(0.05, 0.9, "", transform=ax.transAxes)
+    time_text = ax.text(0.05, 0.9, "", transform=ax.transAxes, fontsize=28)
 
     def init():
         line.set_data([], [])
